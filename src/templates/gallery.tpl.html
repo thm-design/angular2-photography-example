@@ -1,0 +1,29 @@
+<style>
+  .thumbnails-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .thumbnail {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+    background: #333;
+    box-sizing: border-box;
+  }
+      
+  .primary-photo, .thumbnail {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .primary-photo {
+    width: 100%;
+    padding-bottom: 57%;
+  }
+</style>
+
+<div class="primary-photo" [ngStyle]="{'background-image': 'url(' + primaryImage + ')'}"></div>
+<div class="thumbnails-container">  
+  <div class="thumbnail" *ngFor="let thumbnail of thumbnails" [ngStyle]="{'background-image': 'url(' + thumbnail + ')'}"></div>
+</div>

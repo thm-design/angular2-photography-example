@@ -1,0 +1,29 @@
+<style>
+  .work-section {
+    width: 90%;
+    display: flex;    
+    margin: auto;
+  }
+  
+  .work-section > .side-nav {
+    flex: 0 0 250px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .work-section > .gallery-container {
+    flex: 1 1 100%;
+  }
+</style>
+
+<section class="work-section">
+  <ul class="side-nav">
+    <li><a routerLink="in-color" routerLinkActive="active-link">in Color</a></li>
+    <li><a routerLink="in-black-and-white" routerLinkActive="active-link">in Black and White</a></li>
+    <li><a routerLink="cats" routerLinkActive="active-link">Cats</a></li>
+  </ul>
+  <div class="gallery-container">
+    <router-outlet></router-outlet>
+  </div>
+</section>
